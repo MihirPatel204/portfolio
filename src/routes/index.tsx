@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { IslandNav } from "@/components/IslandNav";
 import { RotatingRoles } from "@/components/RotatingRoles";
@@ -33,6 +34,19 @@ export const Route = createFileRoute("/")({
 
 
 function Index() {
+  const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(contact.links.email);
+      setCopyState("copied");
+      window.setTimeout(() => setCopyState("idle"), 1500);
+    } catch {
+      setCopyState("failed");
+      window.setTimeout(() => setCopyState("idle"), 1500);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-x-hidden noise-overlay">
       {/* Ambient backdrop */}
@@ -50,13 +64,6 @@ function Index() {
       <main className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* HERO */}
         <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center pt-32 pb-12">
-          <div className="glass inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs text-muted-foreground mb-8">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-foreground/40" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-foreground" />
-            </span>
-            {profile.availability}
-          </div>
 
           <h1 className="text-bold-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl max-w-4xl">
             <span className="block text-muted-foreground/70 font-display italic font-normal text-2xl sm:text-3xl md:text-4xl mb-2">
@@ -224,13 +231,19 @@ function Index() {
               <Github className="h-4 w-4" />
               GitHub
             </a>
-            <a
-              href={`mailto:${contact.links.email}`}
+            <button
+              type="button"
+              onClick={handleCopyEmail}
               className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full text-sm font-medium hover:opacity-90 transition"
+              aria-live="polite"
             >
               <Mail className="h-4 w-4" />
-              Email Me
-            </a>
+              {copyState === "copied"
+                ? "Copied"
+                : copyState === "failed"
+                  ? "failed"
+                  : "Email Me"}
+            </button>
           </div>
         </section>
 

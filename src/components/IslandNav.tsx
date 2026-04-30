@@ -34,20 +34,7 @@ export function IslandNav() {
   return (
     <nav className="fixed top-5 left-1/2 -translate-x-1/2 z-50">
       <div className="glass-strong rounded-full p-1.5 flex items-center gap-1">
-        {/* Brand chip */}
-        <a
-          href="#home"
-          className="flex items-center gap-2 pl-2 pr-3 py-1.5 rounded-full hover:bg-foreground/5 transition"
-          aria-label="Alex Carter — Home"
-        >
-          <span className="h-7 w-7 rounded-full bg-foreground text-background flex items-center justify-center">
-            <Sparkles className="h-3.5 w-3.5" />
-          </span>
-          <span className="hidden sm:inline text-sm font-medium tracking-tight">Alex Carter</span>
-        </a>
-
-        <span className="hidden sm:block h-5 w-px bg-foreground/10 mx-1" />
-
+      
         {links.map(({ id, label, icon: Icon }) => {
           const isActive = active === id;
           return (

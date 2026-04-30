@@ -3,9 +3,8 @@
     "name": "Mihir Patel",
     "greeting": "Hi, I'm",
     "location": "Ahmedabad, India",
-    "status": "Fresher · Open to opportunities",
+    "status": "Open to opportunities",
     "tagline": "Software · ML · AI",
-    "availability": "Open to internships & new-grad roles — 2026",
     "heroDescription": "I build software, train models, and tinker with AI systems. Currently exploring the space between solid engineering and intelligent products.",
     "roles": [
       "Software Engineer",
@@ -16,8 +15,7 @@
   "about": {
     "heading": "Curious by default, builder by habit.",
     "paragraphs": [
-      "I'm Mihir — a recent graduate from Ahmedabad, India. I love sitting at the intersection of software, machine learning and AI, where ideas turn into working systems you can poke at and improve.",
-      "I don't have professional experience yet, but I've spent the last couple of years building side projects, breaking things on purpose, reading papers, and shipping small tools to learn how real systems behave. I'm now looking for a team where I can keep doing exactly that — with people who care about craft."
+      "I'm Mihir — a recent graduate from Ahmedabad, India. I love sitting at the intersection of software, machine learning and AI, where ideas turn into working systems you can poke at and improve."
     ],
     "focus": [
       { "title": "Software Engineering", "desc": "Full-stack web apps with TypeScript, React and Python backends." },
@@ -49,28 +47,20 @@
       "year": "2024",
       "image": "project-3",
       "url": "#"
-    },
-    {
-      "title": "Pulse",
-      "desc": "Full-stack habit tracker with a clean React frontend, FastAPI backend, and a small ML nudge engine.",
-      "tag": "Software · React · FastAPI",
-      "year": "2024",
-      "image": "project-4",
-      "url": "#"
     }
   ],
   "stack": [
-    "Python", "TypeScript", "React", "Node.js", "FastAPI",
-    "PyTorch", "TensorFlow", "HuggingFace", "LangChain", "scikit-learn",
-    "Pandas", "NumPy", "PostgreSQL", "Docker", "Git", "Linux"
+    "Python", "FastAPI","TypeScript", "React", "Node.js", "Express.js", "Next.js",
+    "PyTorch", "TensorFlow", "LangChain", "scikit-learn",
+    "Pandas", "NumPy", "PostgreSQL", "Docker", "Git", "Linux", "AWS", "GCP"
   ],
   "contact": {
     "heading": "Let's build something.",
     "description": "I'm actively looking for my first role and open to collaborations on interesting software, ML or AI projects. The fastest way to reach me is email — I reply to everything.",
     "links": {
-      "linkedin": "https://linkedin.com/in/mihirpatel",
-      "github": "https://github.com/mihirpatel",
-      "email": "hello@mihirpatel.dev"
+      "linkedin": "https://www.linkedin.com/in/mihir-patel-codes",
+      "github": "https://github.com/MihirPatel204",
+      "email": "mihirpatel6075@gmail.com"
     }
   },
   "seo": {
