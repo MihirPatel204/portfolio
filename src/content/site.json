@@ -1,0 +1,86 @@
+{
+  "profile": {
+    "name": "Mihir Patel",
+    "greeting": "Hi, I'm",
+    "location": "Ahmedabad, India",
+    "status": "Fresher · Open to opportunities",
+    "tagline": "Software · ML · AI",
+    "availability": "Open to internships & new-grad roles — 2026",
+    "heroDescription": "I build software, train models, and tinker with AI systems. Currently exploring the space between solid engineering and intelligent products.",
+    "roles": [
+      "Software Engineer",
+      "ML Engineer",
+      "AI Engineer"
+    ]
+  },
+  "about": {
+    "heading": "Curious by default, builder by habit.",
+    "paragraphs": [
+      "I'm Mihir — a recent graduate from Ahmedabad, India. I love sitting at the intersection of software, machine learning and AI, where ideas turn into working systems you can poke at and improve.",
+      "I don't have professional experience yet, but I've spent the last couple of years building side projects, breaking things on purpose, reading papers, and shipping small tools to learn how real systems behave. I'm now looking for a team where I can keep doing exactly that — with people who care about craft."
+    ],
+    "focus": [
+      { "title": "Software Engineering", "desc": "Full-stack web apps with TypeScript, React and Python backends." },
+      { "title": "ML Engineering", "desc": "Training, evaluating and shipping models with PyTorch and scikit-learn." },
+      { "title": "AI Engineering", "desc": "LLM apps, RAG pipelines and agents using LangChain and open models." }
+    ]
+  },
+  "projects": [
+    {
+      "title": "SentimentScope",
+      "desc": "Fine-tuned a transformer model on multilingual product reviews to surface nuanced sentiment shifts in real time.",
+      "tag": "ML · PyTorch · HuggingFace",
+      "year": "2025",
+      "image": "project-1",
+      "url": "#"
+    },
+    {
+      "title": "AskMyDocs",
+      "desc": "RAG-powered assistant that lets users chat with their PDFs using local embeddings and an open-source LLM.",
+      "tag": "AI · LangChain · FAISS",
+      "year": "2025",
+      "image": "project-2",
+      "url": "#"
+    },
+    {
+      "title": "VisionSort",
+      "desc": "Computer vision pipeline that classifies and sorts recyclable waste from a webcam feed with 94% accuracy.",
+      "tag": "ML · OpenCV · TensorFlow",
+      "year": "2024",
+      "image": "project-3",
+      "url": "#"
+    },
+    {
+      "title": "Pulse",
+      "desc": "Full-stack habit tracker with a clean React frontend, FastAPI backend, and a small ML nudge engine.",
+      "tag": "Software · React · FastAPI",
+      "year": "2024",
+      "image": "project-4",
+      "url": "#"
+    }
+  ],
+  "stack": [
+    "Python", "TypeScript", "React", "Node.js", "FastAPI",
+    "PyTorch", "TensorFlow", "HuggingFace", "LangChain", "scikit-learn",
+    "Pandas", "NumPy", "PostgreSQL", "Docker", "Git", "Linux"
+  ],
+  "contact": {
+    "heading": "Let's build something.",
+    "description": "I'm actively looking for my first role and open to collaborations on interesting software, ML or AI projects. The fastest way to reach me is email — I reply to everything.",
+    "links": {
+      "linkedin": "https://linkedin.com/in/mihirpatel",
+      "github": "https://github.com/mihirpatel",
+      "email": "hello@mihirpatel.dev"
+    }
+  },
+  "seo": {
+    "title": "Mihir Patel — Software, ML & AI Engineer",
+    "description": "Portfolio of Mihir Patel — a software, ML and AI engineer based in Ahmedabad, building intelligent systems and thoughtful interfaces.",
+    "ogTitle": "Mihir Patel — Software · ML · AI Engineer",
+    "ogDescription": "Building intelligent systems and thoughtful interfaces."
+  },
+  "footer": {
+    "copyright": "© 2026 Mihir Patel. All rights reserved.",
+    "note": "Designed & built with care."
+  }
+}
