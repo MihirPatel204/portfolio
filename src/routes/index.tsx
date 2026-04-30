@@ -3,8 +3,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { IslandNav } from "@/components/IslandNav";
 import { RotatingRoles } from "@/components/RotatingRoles";
 import { ArrowUpRight, Github, Linkedin, Mail, MapPin, Sparkles, ArrowDown, GraduationCap } from "lucide-react";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
+import project1 from "@/assets/project-1.png";
+import project2 from "@/assets/project-2.png";
 import project3 from "@/assets/project-3.jpg";
 import site from "@/content/site.json";
 
