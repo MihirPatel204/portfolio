@@ -6,14 +6,12 @@ import { ArrowUpRight, Github, Linkedin, Mail, MapPin, Sparkles, ArrowDown, Grad
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
 import site from "@/content/site.json";
 
 const imageMap: Record<string, string> = {
   "project-1": project1,
   "project-2": project2,
   "project-3": project3,
-  "project-4": project4,
 };
 
 const { profile, about, projects: projectsData, stack, contact, seo, footer } = site;
@@ -147,7 +145,7 @@ function Index() {
               <h2 className="text-bold-display text-3xl sm:text-5xl mt-4">Recent projects.</h2>
             </div>
             <div className="hidden sm:flex items-center gap-2 text-sm text-muted-foreground">
-              <Sparkles className="h-4 w-4" /> 2023 — 2025
+              <Sparkles className="h-4 w-4" /> 2025 — 2026
             </div>
           </div>
 
