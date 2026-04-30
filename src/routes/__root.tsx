@@ -57,9 +57,14 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" style={{ backgroundColor: "#141414" }}>
       <head>
         <HeadContent />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="light"){document.documentElement.classList.remove("dark");document.documentElement.style.backgroundColor="#fafafa"}else{document.documentElement.classList.add("dark");document.documentElement.style.backgroundColor="#141414"}}catch(e){}})();`,
+          }}
+        />
       </head>
       <body>
         {children}
