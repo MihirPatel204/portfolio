@@ -1,8 +1,10 @@
-import { useState } from "react";
+
 import { createFileRoute } from "@tanstack/react-router";
 import { IslandNav } from "@/components/IslandNav";
 import { RotatingRoles } from "@/components/RotatingRoles";
-import { ArrowUpRight, Github, Linkedin, Mail, MapPin, Sparkles, ArrowDown, GraduationCap } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, MapPin, Sparkles, ArrowDown, GraduationCap } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
+import { Toaster } from "@/components/ui/sonner";
 import project1 from "@/assets/project-1.png";
 import project2 from "@/assets/project-2.png";
 import project3 from "@/assets/project-3.jpg";
@@ -32,18 +34,6 @@ export const Route = createFileRoute("/")({
 
 
 function Index() {
-  const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
-
-  const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(contact.links.email);
-      setCopyState("copied");
-      window.setTimeout(() => setCopyState("idle"), 1500);
-    } catch {
-      setCopyState("failed");
-      window.setTimeout(() => setCopyState("idle"), 1500);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-x-hidden noise-overlay">
@@ -201,47 +191,44 @@ function Index() {
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="py-20 sm:py-24 text-center">
-          <div className="text-xs uppercase tracking-widest text-muted-foreground">04 — Contact</div>
-          <h2 className="text-bold-display text-4xl sm:text-5xl md:text-6xl mt-6">
-            {contact.heading}
-          </h2>
-          <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg text-muted-foreground leading-relaxed">
-            {contact.description}
-          </p>
+        <section id="contact" className="py-20 sm:py-24">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+            {/* Left column — text & links */}
+            <div className="text-left">
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">04 — Contact</div>
+              <h2 className="text-bold-display text-4xl sm:text-5xl md:text-6xl mt-6">
+                {contact.heading}
+              </h2>
+              <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed">
+                {contact.description}
+              </p>
 
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <a
-              href={contact.links.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="glass inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium hover:bg-foreground/5 transition"
-            >
-              <Linkedin className="h-4 w-4" />
-              LinkedIn
-            </a>
-            <a
-              href={contact.links.github}
-              target="_blank"
-              rel="noreferrer"
-              className="glass inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium hover:bg-foreground/5 transition"
-            >
-              <Github className="h-4 w-4" />
-              GitHub
-            </a>
-            <button
-              type="button"
-              onClick={handleCopyEmail}
-              className="inline-flex items-center gap-2 bg-foreground text-background px-6 py-3 rounded-full text-sm font-medium hover:opacity-90 transition"
-              aria-live="polite"
-            >
-              <Mail className="h-4 w-4" />
-              {copyState === "copied"
-                ? "Copied"
-                : copyState === "failed"
-                  ? "failed"
-                  : "Email Me"}
-            </button>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href={contact.links.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="glass inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium hover:bg-foreground/5 transition"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  LinkedIn
+                </a>
+                <a
+                  href={contact.links.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="glass inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium hover:bg-foreground/5 transition"
+                >
+                  <Github className="h-4 w-4" />
+                  GitHub
+                </a>
+              </div>
+            </div>
+
+            {/* Right column — form */}
+            <div>
+              <ContactForm />
+            </div>
           </div>
         </section>
 
@@ -250,6 +237,7 @@ function Index() {
           <div>{footer.note}</div>
         </footer>
       </main>
+      <Toaster position="bottom-right" />
     </div>
   );
 }
