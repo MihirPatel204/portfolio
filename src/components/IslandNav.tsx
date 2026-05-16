@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Home, User, Briefcase, Code2, Mail, Sun, Moon, Sparkles } from "lucide-react";
+import { Home, User, Briefcase, Code2, Mail, Sun, Moon, Sparkles, FileText } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 
 const links = [
@@ -53,6 +53,19 @@ export function IslandNav() {
             </a>
           );
         })}
+
+        <span className="h-5 w-px bg-foreground/10 mx-1" />
+
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Resume"
+          title="Resume"
+          className="h-9 w-9 rounded-full flex items-center justify-center text-foreground/70 hover:text-foreground hover:bg-foreground/5 transition"
+        >
+          <FileText className="h-4 w-4" />
+        </a>
 
         <span className="h-5 w-px bg-foreground/10 mx-1" />
 
