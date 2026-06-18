@@ -2,7 +2,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { IslandNav } from "@/components/IslandNav";
 import { RotatingRoles } from "@/components/RotatingRoles";
-import { ArrowUpRight, Github, Linkedin, MapPin, Sparkles, ArrowDown, GraduationCap } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, MapPin, Sparkles, ArrowDown, GraduationCap, ExternalLink } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 import { Toaster } from "@/components/ui/sonner";
 import project1 from "@/assets/project-1.png";
@@ -142,36 +142,85 @@ function Index() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6">
-            {projects.map((p, i) => (
-              <a
-                key={p.title}
-                href={p.url}
-                className="group glass rounded-3xl overflow-hidden flex flex-col hover:bg-foreground/[0.03] transition-colors"
-              >
-                <div className="aspect-[16/10] overflow-hidden border-b border-glass-border">
-                  <img
-                    src={p.image}
-                    alt={`${p.title} preview`}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 flex flex-col gap-3">
-                  <div className="flex items-center justify-between text-xs tabular-nums text-muted-foreground">
-                    <span>0{i + 1}</span>
-                    <span>{p.year}</span>
+            {projects.map((p, i) => {
+              const primaryLink = p.live || p.github;
+              return (
+                <div
+                  key={p.title}
+                  className="group glass rounded-3xl overflow-hidden flex flex-col hover:bg-foreground/[0.015] hover:shadow-soft transition-all duration-300"
+                >
+                  <a
+                    href={primaryLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="aspect-[16/10] overflow-hidden border-b border-glass-border block cursor-pointer"
+                  >
+                    <img
+                      src={p.image}
+                      alt={`${p.title} preview`}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </a>
+                  <div className="p-6 flex flex-col justify-between flex-1 gap-6">
+                    <div className="flex flex-col gap-3">
+                      <div className="flex items-center justify-between text-xs tabular-nums text-muted-foreground">
+                        <span>0{i + 1}</span>
+                        <span>{p.year}</span>
+                      </div>
+                      <div className="flex items-start justify-between gap-3">
+                        <a
+                          href={primaryLink}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="hover:underline decoration-1 underline-offset-4"
+                        >
+                          <h3 className="text-bold-display text-2xl sm:text-3xl leading-[1] text-foreground">
+                            {p.title}
+                          </h3>
+                        </a>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+                      <div className="text-xs text-muted-foreground/80 mt-1">{p.tag}</div>
+                    </div>
+
+                    <div className="flex items-center gap-3 pt-4 border-t border-glass-border">
+                      {p.live && (
+                        <a
+                          href={p.live}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 bg-foreground text-background px-4 py-2 rounded-full text-xs font-semibold hover:opacity-90 transition shadow-sm"
+                        >
+                          Live Demo
+                          <ArrowUpRight className="h-3.5 w-3.5" />
+                        </a>
+                      )}
+                      {p.github && (
+                        <a
+                          href={p.github}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1.5 glass text-foreground px-4 py-2 rounded-full text-xs font-semibold hover:bg-foreground/10 hover:text-foreground transition"
+                        >
+                          {p.github.includes("github.com") ? (
+                            <>
+                              <Github className="h-3.5 w-3.5" />
+                              GitHub
+                            </>
+                          ) : (
+                            <>
+                              <ExternalLink className="h-3.5 w-3.5" />
+                              Kaggle
+                            </>
+                          )}
+                        </a>
+                      )}
+                    </div>
                   </div>
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-bold-display text-2xl sm:text-3xl leading-[1]">
-                      {p.title}
-                    </h3>
-                    <ArrowUpRight className="h-5 w-5 mt-1 text-muted-foreground group-hover:text-foreground group-hover:rotate-45 transition-all shrink-0" />
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-                  <div className="text-xs text-muted-foreground/80 mt-1">{p.tag}</div>
                 </div>
-              </a>
-            ))}
+              );
+            })}
           </div>
         </section>
 

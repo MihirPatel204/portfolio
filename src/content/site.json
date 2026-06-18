@@ -30,7 +30,8 @@
       "tag": "AI · Next.js · LangChain · LangGraph · RAG",
       "year": "2026",
       "image": "project-1", 
-      "url": "https://github.com/MihirPatel204/Daily-Intelligence"
+      "github": "https://github.com/MihirPatel204/Daily-Intelligence",
+      "live": "https://daily-intelligence-five.vercel.app/"
     },
     {
       "title": "Movie Recommender System",
@@ -38,7 +39,8 @@
       "tag": "ML · Python · Streamlit · Docker",
       "year": "2025",
       "image": "project-2",
-      "url": "https://github.com/MihirPatel204/Movie-Recommender-System"
+      "github": "https://github.com/MihirPatel204/Movie-Recommender-System",
+      "live": "https://movie-recommender-o5sq.onrender.com/"
     },
     {
       "title": "AgenticPilot",
@@ -46,7 +48,8 @@
       "tag": "AI · Next.js · Gemini · Supabase",
       "year": "2025",
       "image": "project-3",
-      "url": "https://github.com/Priyanshu-Debugs/AgenticPilot"
+      "github": "https://github.com/Priyanshu-Debugs/AgenticPilot",
+      "live": "https://www.agenticpilot.app/"
     },
     {
       "title": "Exoplanet Detection",
@@ -54,7 +57,8 @@
       "tag": "ML · scikit-learn · Pandas · Kaggle",
       "year": "2026",
       "image": "project-4",
-      "url": "https://www.kaggle.com/code/mihirpatel001/exoplanet-detection-using-kepler-light-curves"
+      "github": "https://www.kaggle.com/code/mihirpatel001/exoplanet-detection-using-kepler-light-curves",
+      "live": "https://exoplanet-detection-kepler.streamlit.app/"
     }
   ],
   "stack": [
