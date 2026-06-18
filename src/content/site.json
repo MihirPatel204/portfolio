@@ -25,11 +25,19 @@
   },
   "projects": [
     {
+      "title": "The Daily Intelligence",
+      "desc": "AI-synthesized global and Indian news aggregator that clusters events using LangGraph, provides automated daily briefings, and features an interactive RAG chat for grounded queries.",
+      "tag": "AI · Next.js · LangChain · LangGraph · RAG",
+      "year": "2026",
+      "image": "project-1", 
+      "url": "https://github.com/MihirPatel204/Daily-Intelligence"
+    },
+    {
       "title": "Movie Recommender System",
       "desc": "Content-based movie recommendation engine built with Python and Streamlit. Uses cosine similarity on movie metadata to suggest similar films, containerised with Docker for easy deployment.",
       "tag": "ML · Python · Streamlit · Docker",
       "year": "2025",
-      "image": "project-1",
+      "image": "project-2",
       "url": "https://github.com/MihirPatel204/Movie-Recommender-System"
     },
     {
@@ -37,7 +45,7 @@
       "desc": "AI-powered SaaS platform that uses autonomous agents to automate business operations — from Gmail triage to social media workflows — built with Next.js 15 and Google Gemini.",
       "tag": "AI · Next.js · Gemini · Supabase",
       "year": "2025",
-      "image": "project-2",
+      "image": "project-3",
       "url": "https://github.com/Priyanshu-Debugs/AgenticPilot"
     },
     {
@@ -45,7 +53,7 @@
       "desc": "Machine learning pipeline to detect exoplanets from Kepler light-curve data using ensemble methods, SMOTE resampling and cross-validated model comparison for robust classification.",
       "tag": "ML · scikit-learn · Pandas · Kaggle",
       "year": "2026",
-      "image": "project-3",
+      "image": "project-4",
       "url": "https://www.kaggle.com/code/mihirpatel001/exoplanet-detection-using-kepler-light-curves"
     }
   ],
