@@ -25,11 +25,19 @@
   },
   "projects": [
     {
+      "title": "GitDecode",
+      "desc": "AI-powered codebase intelligence platform replacing vector chunking with Vectorless RAG via AST graph traversal. Features multi-agent LangGraph workflows, interactive Neo4j NVL graph visualizer, and 3-hop blast radius analysis.",
+      "tag": "AI · Python · LangGraph · Neo4j · Vectorless RAG",
+      "year": "2026",
+      "image": "project-5",
+      "github": "https://github.com/Priyanshu-Debugs/GitDecode"
+    },
+    {
       "title": "The Daily Intelligence",
       "desc": "AI-synthesized global and Indian news aggregator that clusters events using LangGraph, provides automated daily briefings, and features an interactive RAG chat for grounded queries.",
       "tag": "AI · Next.js · LangChain · LangGraph · RAG",
       "year": "2026",
-      "image": "project-1", 
+      "image": "project-1",
       "github": "https://github.com/MihirPatel204/Daily-Intelligence",
       "live": "https://daily-intelligence-five.vercel.app/"
     },
@@ -62,8 +70,8 @@
     }
   ],
   "stack": [
-    "Python", "FastAPI","TypeScript", "React", "Node.js", "Express.js", "Next.js",
-    "PyTorch", "TensorFlow", "LangChain", "scikit-learn",
+    "Python", "FastAPI", "TypeScript", "React", "Node.js", "Express.js", "Next.js",
+    "PyTorch", "TensorFlow", "LangChain", "LangGraph", "Neo4j", "scikit-learn",
     "Pandas", "NumPy", "PostgreSQL", "Docker", "Git", "Linux", "AWS", "GCP"
   ],
   "contact": {

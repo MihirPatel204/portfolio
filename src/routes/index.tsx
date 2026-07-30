@@ -8,7 +8,8 @@ import { Toaster } from "@/components/ui/sonner";
 import project1 from "@/assets/project-1.png";
 import project2 from "@/assets/project-2.png";
 import project3 from "@/assets/project-3.png";
-import project4 from "@/assets/project-4.jpg";
+import project4 from "@/assets/project-4.png";
+import project5 from "@/assets/project-5.png";
 import site from "@/content/site.json";
 
 const imageMap: Record<string, string> = {
@@ -16,6 +17,7 @@ const imageMap: Record<string, string> = {
   "project-2": project2,
   "project-3": project3,
   "project-4": project4,
+  "project-5": project5,
 };
 
 const { profile, about, projects: projectsData, stack, contact, seo, footer } = site;
