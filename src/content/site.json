@@ -57,7 +57,7 @@
       "year": "2025",
       "image": "project-3",
       "github": "https://github.com/Priyanshu-Debugs/AgenticPilot",
-      "live": "https://www.agenticpilot.app/"
+      "live": "https://www.agenticpilot.vercel.app/"
     },
     {
       "title": "Exoplanet Detection",
